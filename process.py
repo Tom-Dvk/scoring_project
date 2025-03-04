@@ -88,10 +88,10 @@ def merge_in_chunks2(df1, df2, chunk_size=100000):
 def processing_na(df):
     df.replace([float('inf'), float('-inf')], float('nan'), inplace=True)
     df = (
-        df.sort_values(by="publication_date")
+        df
         .groupby("conm")
         .ffill()
-    )
+    ).join(df[['conm']])
     return df
 
 def process_data(acc, crsp_daily, ccmxpf_linktable, company_variable, lopucki):
