@@ -1,59 +1,72 @@
-💼 Scoring Project – Predicting Bankruptcy
-Ce projet vise à développer un modèle de scoring pour prédire la probabilité de faillite d'une entreprise, à partir de plusieurs jeux de données contenant des variables financières. Il s'agit d'un projet pédagogique de machine learning supervisé, orienté classification binaire.
+# 💼 Scoring Project – Predicting Bankruptcy
 
-📂 Fichiers importants
-Le fichier to_pkl.py permet de transformet le format des fichiers en pkl afin de pouvoir traiter les données de manière plus rapide
-Le fichier process.py permet de faire la jointure entre les différentes source de données, et de générer le fichier processed_set.csv qui sera le fichier utilisé pour la modélisation
+Ce projet vise à développer un modèle de scoring pour prédire la probabilité de faillite d'une entreprise à partir de jeux de données contenant des variables financières. Il s'agit d'un projet pédagogique de machine learning supervisé, orienté classification binaire.
 
-📊 Objectif
+---
+
+## 📂 Fichiers importants
+
+- `to_pkl.py` : permet de transformer les fichiers au format `.pkl` pour accélérer les traitements.
+- `process.py` : réalise la jointure entre les différentes sources de données et génère le fichier `processed_set.csv` utilisé pour la modélisation.
+
+---
+
+## 📊 Objectif
+
 Détecter les entreprises susceptibles de faire faillite à l’aide d’un modèle de machine learning entraîné sur des données comptables et financières historiques.
 
-🔍 Données
-Le projet utilise des jeux de données représentant différentes années. Chaque fichier contient des observations d’entreprises, avec des variables financières et une variable cible provenant de LoPucki indiquant si l'entreprise a fait faillite.
+---
 
-Les étapes incluent :
-  - Fusion des datasets.
-  - Construction de la variable cible.
-  - Nettoyage et normalisation des données.
-  - Feature engineering (création des variables explicatives).
+## 🔍 Données
 
-🧠 Modèles utilisés
-Le projet teste plusieurs approches de classification binaire, notamment :
+Le projet utilise des jeux de données représentant différentes années.  
+Chaque fichier contient des observations d’entreprises avec :
 
-XGBoost
+- Des variables financières.
+- Une variable cible (`target`) provenant de la base LoPucki, indiquant si l'entreprise a fait faillite.
 
-Logistic Regression
+### Étapes de traitement :
+- Fusion des datasets.
+- Construction de la variable cible.
+- Nettoyage et normalisation des données.
+- Feature engineering (création de nouvelles variables explicatives).
 
-🧪 Évaluation
-Les métriques utilisées :
+---
 
-Accuracy
+## 🧠 Modèles utilisés
 
-Precision
+Le projet explore plusieurs modèles de classification binaire :
 
-Recall (prioritaire)
+- `XGBoost`
+- `Régression logistique`
 
-F1-Score
+---
 
-Courbe ROC / AUC
+## 🧪 Évaluation
 
+Les modèles sont évalués à l’aide des métriques suivantes :
 
-🧰 Technologies
-Python
+- Accuracy
+- Précision
+- Rappel (**prioritaire**)
+- F1-Score
+- Courbe ROC / AUC
 
-Pandas / Numpy
+---
 
-Scikit-learn
+## 🧰 Technologies
 
-XGBoost
+- Python
+- Pandas / Numpy
+- Scikit-learn
+- XGBoost
+- Matplotlib
+- Jupyter Notebook
 
-Matplotlib 
+---
 
-Jupyter Notebook
+## 📌 Auteurs
 
-📌 Auteurs
-Devynck Tom
-
-Goardet Marie
-
-Rameil Hugo
+- **Devynck Tom**  
+- **Goardet Marie**  
+- **Rameil Hugo**
